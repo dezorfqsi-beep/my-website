@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو مطعم الهنيني</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <img src="img/473986249_1132300785573205_1099716719279221829_n.jpg" alt="لوجو الهنيني" class="logo-img">
+                <span class="logo-text">الهنيني</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="menu.html" class="active"><i class="fas fa-utensils"></i> المنيو</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> التواصل</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="menu-title">منيو مطعم الهنيني</h1>
+
+        <!-- Full Menu Image -->
+        <section class="menu-image-section">
+            <div class="menu-image-container">
+                <img 
+                    src="img/487703201_1194198519383431_59993104498234779_n.jpg" 
+                    alt="منيو مطعم الهنيني الكامل"
+                    class="full-menu-image">
+            </div>
+            <div class="menu-info">
+                <h2>المنيو الكامل</h2>
+                <p>استمتع بجميع الوجبات اللذيذة المتاحة في مطعم الهنيني. جودة عالية وأسعار مناسبة لجميع الأذواق</p>
+                <a href="contact.html" class="btn btn-primary"><span>اتصل بنا للطلب</span></a>
+            </div>
+        </section>
+
+        <!-- Categories Tabs -->
+        <section class="menu-categories-section">
+            <h2>اختر الصنف</h2>
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="broasted">
+                    <i class="fas fa-drumstick-bite"></i> أرز & دجاج الهنيني المشوي 
+                </button>
+                <button class="category-tab" data-category="burgers">
+                    <i class="fas fa-burger"></i> البرغر
+                </button>
+                <button class="category-tab" data-category="snacks">
+                    <i class="fas fa-popcorn"></i> السناكات
+                </button>
+                <button class="category-tab" data-category="drinks">
+                    <i class="fas fa-ice-cream"></i> الحلويات والمشروبات
+                </button>
+            </div>
+
+            <!-- Broasted Category -->
+            <div class="menu-category active" id="broasted">
+                <h3><i class="fas fa-drumstick-bite"></i> اصناف أرز & دجاج الهنيني المشوي</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="img/490497916_1208395601297056_6405685621312684283_n.jpg" alt="بروستد دجاج">
+                        <h4> نصف فروج</h4>
+                        <p class="price">2.75</p>
+                        <button class="btn-order" onclick="orderItem('قطع بروستد')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/492055507_1208396057963677_941404741028138116_n.jpg" alt="بروستد فيليه">
+                        <h4> فروج</h4>
+                        <p class="price">5.30</p>
+                        <button class="btn-order" onclick="orderItem('فيليه بروستد')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/490698972_1208395764630373_4333073264518751665_n.jpg" alt="بروستد كومبو">
+                        <h4> سدر دجاج</h4>
+                        <p class="price">8.00</p>
+                        <button class="btn-order" onclick="orderItem('كومبو بروستد')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/490739258_1208396034630346_8573245042910824229_n.jpg" alt="بروستد عائلي">
+                        <h4>  سدر دجاجة ونصف</h4>
+                        <p class="price">11.80</p>
+                        <button class="btn-order" onclick="orderItem('دجاج بروستد عائلي')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/490902647_1208396004630349_5025093012278175708_n.jpg" alt="بروستد خاص">
+                        <h4>  سدر دجاجتين</h4>
+                        <p class="price">15.00</p>
+                        <button class="btn-order" onclick="orderItem('بروستد خاص الهنيني')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/491127202_1208395747963708_1577906552824137788_n.jpg" alt="بروستد خاص">
+                        <h4>  صحن أرز سادة </h4>
+                        <p class="price">1.00/1.50</p>
+                        <button class="btn-order" onclick="orderItem('بروستد خاص الهنيني')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Burgers Category -->
+            <div class="menu-category" id="burgers">
+                <h3><i class="fas fa-burger"></i> اصناف البرغر</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="img/490697913_1207841498019133_7869729228409421595_n.jpg" alt="الهنيني برغر ">
+                        <h4> الهنيني برغر</h4>
+                        <p class="price">4</p>
+                        <button class="btn-order" onclick="orderItem('برغر عادي')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/490471303_1207841558019127_1358524150340349878_n.jpg" alt=" تشيكن وايت ماشروم">
+                        <h4> تشيكن وايت ماشروم</h4>
+                        <p class="price">6</p>
+                        <button class="btn-order" onclick="orderItem('برغر مزدوج')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/490554723_1207841638019119_7678906434304948666_n.jpg" alt="مكسيكان برغر">
+                        <h4> مكسيكان برغر</h4>
+                        <p class="price">5</p>
+                        <button class="btn-order" onclick="orderItem('برغر جبنة')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/491758828_1207841674685782_8386804503451061753_n.jpg" alt="برغر بيكون">
+                        <h4> وايت ماشروم برغر</h4>
+                        <p class="price">7</p>
+                        <button class="btn-order" onclick="orderItem('برغر بيكون')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/490846824_1207841584685791_9014468924985347562_n.jpg" alt="برغر فلافل">
+                        <h4> رويال برغر</h4>
+                        <p class="price">3.5</p>
+                        <button class="btn-order" onclick="orderItem('برغر فلافل')">اطلب الآن</button>
+                    </div>
+                                        <div class="menu-item">
+                        <img src="img/490898793_1207841341352482_383029994922710733_n.jpg" alt="برغر فلافل">
+                        <h4>  كلاسيك برغر</h4>
+                        <p class="price">3.5</p>
+                        <button class="btn-order" onclick="orderItem('برغر فلافل')">اطلب الآن</button>
+                    </div>
+                                        <div class="menu-item">
+                        <img src="img/490719904_1207841348019148_4555028165128607592_n.jpg" alt="برغر فلافل">
+                        <h4>  جراند تشكن</h4>
+                        <p class="price">3.5</p>
+                        <button class="btn-order" onclick="orderItem('برغر فلافل')">اطلب الآن</button>
+                    </div>
+                                        <div class="menu-item">
+                        <img src="img/490809013_1207841434685806_6729119659761370188_n.jpg" alt="برغر فلافل">
+                        <h4>  كولومبيان تشيكن برغر</h4>
+                        <p class="price">3.5</p>
+                        <button class="btn-order" onclick="orderItem('برغر فلافل')">اطلب الآن</button>
+                    </div>
+                                        <div class="menu-item">
+                        <img src="img/491210323_1207841654685784_2648365590321107700_n.jpg" alt="برغر فلافل">
+                        <h4>  أوول تشيز برغر</h4>
+                        <p class="price">3.5</p>
+                        <button class="btn-order" onclick="orderItem('برغر فلافل')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snacks Category -->
+            <div class="menu-category" id="snacks">
+                <h3><i class="fas fa-drumstick-bite"></i> سناكات الهنيني</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="img/491751949_1207784968024786_4340613427246797967_n.jpg" alt="أجنحة دجاج">
+                        <h4><i class="fas fa-feather"></i>  برغر</h4>
+                      
+                        <button class="btn-order" onclick="orderItem('أجنحة دجاج')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/491440752_1207784868024796_6569964106994791160_n.jpg" alt="ناغتس">
+                        <h4><i class="fas fa-cube"></i>  سكالوب</h4>
+                     
+                        <button class="btn-order" onclick="orderItem('ناغتس دجاج')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/490906463_1207784954691454_185958661448340862_n.jpg" alt="بطاطس مقلية">
+                        <h4><i class="fas fa-square"></i>  هوت دوج</h4>
+                     
+                        <button class="btn-order" onclick="orderItem('بطاطس مقلية')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/490815450_1207784958024787_7927723381977414186_n.jpg" alt="سمبوسة">
+                        <h4><i class="fas fa-triangle"></i>  ستيك لحمة</h4>
+                       
+                        <button class="btn-order" onclick="orderItem('سمبوسة جبنة')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/490749075_1207784851358131_803181535392705112_n.jpg" alt="كوكتيل سناكات">
+                        <h4><i class="fas fa-star"></i>  كوردون بلو</h4>
+                      
+                        <button class="btn-order" onclick="orderItem('كوكتيل سناكات')">اطلب الآن</button>
+                    </div>
+                            <div class="menu-item">
+                        <img src="img/491518472_1207784944691455_4360109271920954076_n.jpg" alt="كوكتيل سناكات">
+                        <h4><i class="fas fa-star"></i>   ساندويش كرسبي</h4>
+              
+                        <button class="btn-order" onclick="orderItem('كوكتيل سناكات')">اطلب الآن</button>
+                    </div>
+                                        <div class="menu-item">
+                        <img src="img/490731410_1207784951358121_4150192447310989880_n.jpg" alt="كوكتيل سناكات">
+                        <h4><i class="fas fa-star"></i>   زنجر بلكريما</h4>
+                        <button class="btn-order" onclick="orderItem('كوكتيل سناكات')">اطلب الآن</button>
+                    </div>
+                                                            <div class="menu-item">
+                        <img src="img/490796352_1207784964691453_3773680380750842857_n.jpg" alt="كوكتيل سناكات">
+                        <h4><i class="fas fa-star"></i>   زنجر </h4>
+                        <button class="btn-order" onclick="orderItem('كوكتيل سناكات')">اطلب الآن</button>
+                    </div>
+                                                                                <div class="menu-item">
+                        <img src="img/491328092_1207784811358135_859379193808070702_n.jpg" alt="كوكتيل سناكات">
+                        <h4><i class="fas fa-star"></i>   فاهيتا </h4>
+                        <button class="btn-order" onclick="orderItem('كوكتيل سناكات')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Drinks Category -->
+            <div class="menu-category" id="drinks">
+                <h3><i class="fas fa-ice-cream"></i> الحلويات والمشروبات</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="img/591456515_1415019333968014_6713686404586247570_n.jpg" alt="عصير طازج">
+                        <h4> كاسة الفراولة الفريش المغمّسة بشوكلاتة بتدفي القلب قبل الجو </h4>
+                        <p class="price">1.00</p>
+                        <button class="btn-order" onclick="orderItem('عصير طازج')">اطلب الآن</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/585301056_1405660741570540_3867987667252029270_n.jpg" alt="ميلك شيك">
+                        <h4> كاسة الأفوكادو بالقشطة والعسل والمكسرات</h4>
+                        <p class="price">1.50</p>
+                        <button class="btn-order" onclick="orderItem('ميلك شيك')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Modal for Order -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>تفاصيل الطلب</h2>
+            <p>لتقديم طلبك، يرجى الاتصال بنا مباشرة   </p>
+            <a href="contact.html" class="btn btn-primary"><span>اتصل بنا</span></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
